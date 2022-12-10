@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Index.css" />
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
+    <title>Bio Concept</title>
+  </head>
+  <body>
+    <!--começo da nav bar-->
+    <header>
+      <nav class="navigation">
+        <img src="img/logo.png" alt="logo" class="imagem" />
+        <img src="img/bioconcept.png" alt="nome" class="nome-img" />
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a href="#contato">Contato</a></li>
+          <li class="nav-item"><a href="Login.php">Entrar</a></li>
+        </ul>
+        <div class="menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!--fim da nav bar-->
+
+    <!--começo dos slides-->
+    <main>
+      <section class="home" id="home">
+        <div class="slides">
+          <input type="radio" name="radio" id="radio1" checked />
+          <input type="radio" name="radio" id="radio2" />
+          <input type="radio" name="radio" id="radio3" />
+
+          <div class="imagens one">
+            <img src="img/1.png" alt="img1" />
+          </div>
+          <div class="imagens">
+            <img src="img/2.png" alt="img2" />
+          </div>
+          <div class="imagens">
+            <img src="img/3.png" alt="img3" />
+          </div>
+        </div>
+        <div class="navigation-slides">
+          <label for="radio1" class="nav"></label>
+          <label for="radio2" class="nav"></label>
+          <label for="radio3" class="nav"></label>
+        </div>
+      </section>
+      <!--fim dos slides-->
+
+      <!--começo do sobre-->
+      <section class="bio" id="sobre">
+        <h1 class="titulo">Bio Concept</h1>
+        <br />
+        <p class="texto-bio">
+          A Bio Concept é uma empresa que atua na grande São Paulo, e
+          preocupados com o meio ambiente criou um projeto de venda online de
+          roupas, onde você poderá ajudar tanto o meio ambiente quanto alguma
+          pessoa que busca por aquela peça no precinho.
+        </p>
+      </section>
+    </main>
+
+    <!--footer-->
+    <footer class="footer" id="contato">
+      <div class="componentes">
+        <h2 class="titulo-footer">Bio Concept</h2>
+
+        <p>
+          <img
+            src="img/localizacao.png"
+            alt="localizacao"
+            class="localizacao"
+          />
+          <a href="https://goo.gl/maps/BcjByezXb6Zicur79" class="loc"
+            >Av.Paulista</a
+          >
+        </p>
+        <p>
+          <img src="img/email.png" alt="email" class="email" />
+          <a href="https://gmail.com" class="email-bio"
+            >suportBioConcept@gmail.com</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!--/footer-->
+
+    <script>
+      /*para passar os slides sozinhos*/
+      let contador = 1;
+      setInterval(function () {
+        document.getElementById("radio" + contador).checked = true;
+        contador++;
+
+        if (contador > 3) {
+          contador = 1;
+        }
+      }, 4000); /*milisegundo*/
+
+      /*âncoras*/
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

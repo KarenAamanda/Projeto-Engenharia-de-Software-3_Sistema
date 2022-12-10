@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --color-verde1: #31492b;
+  --verde: #58926a;
+  --branco: #e6e4d5;
+  --color-branco2: white;
+  --laranja: #f29b30;
+}
+body {
+  background-color: var(--branco);
+}
+.fieldset {
+  border: 0;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  box-shadow: 0 0.1rem 0.5rem #ccc;
+  width: 100%;
+  background-color: var(--verde);
+  transition: all 0.1s;
+}
+.navigation .imagem {
+  width: 80px;
+  height: 60px;
+}
+.navigation .nome-img {
+  width: 80px;
+  height: 60px;
+  margin-left: -1115px;
+  margin-top: 3px;
+}
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: -1rem;
+}
+.navigation ul li a {
+  color: var(--branco);
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.5s;
+  font-family: "Fredoka One", cursive;
+  border-bottom: 3px solid transparent;
+}
+.navigation ul li a:hover {
+  color: var(--laranja);
+  border-bottom: 3px solid var(--laranja);
+}
+.menu {
+  cursor: pointer;
+  display: none;
+}
+.menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--branco);
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+.inputbox {
+  position: relative;
+  margin-left: 20px;
+}
+.form {
+  right: 50%;
+  text-align: left;
+}
+.form .titulo {
+  font-size: 32px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.inputbox {
+  position: relative;
+}
+.LabelInput {
+  margin-right: 50px;
+  position: relative;
+  top: 1px;
+  left: 0px;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.inputUser {
+  font-size: 20px;
+  border-radius: 4px;
+  border-color: lightgray;
+  width: 20%;
+  letter-spacing: 2px;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+  top: -20px;
+  font-size: 14px;
+  color: var(--color-branco2);
+}
+.span-required {
+  font-size: 14px;
+  margin: 3px 0 0 1px;
+  color: var(--color-red);
+  display: none;
+}
+#categoria {
+  font-size: 16px;
+  left: -20px;
+  border-radius: 4px;
+}
+#imagem {
+  font-size: 14px;
+  left: 2px;
+  border-radius: 4px;
+}
+#submit {
+  background-color: var(--color-verde1);
+  width: 10%;
+  height: 40px;
+  color: var(--branco);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  left: 5px;
+}

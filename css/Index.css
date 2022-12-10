@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --verde: #58926a;
+  --branco: #e6e4d5;
+  --laranja: #f29b30;
+}
+body {
+  background-color: var(--branco);
+}
+/*navbar*/
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  box-shadow: 0 0.1rem 0.5rem #ccc;
+  width: 100%;
+  background-color: var(--verde);
+  transition: all 0.1s;
+}
+.navigation .imagem {
+  width: 80px;
+  height: 60px;
+}
+.navigation .nome-img {
+  width: 80px;
+  height: 60px;
+  margin-left: -790px;
+  margin-top: 3px;
+}
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.navigation ul li a {
+  color: var(--branco);
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.5s;
+  font-family: "Fredoka One", cursive;
+  border-bottom: 3px solid transparent;
+}
+.navigation ul li a:hover {
+  color: var(--laranja);
+  border-bottom: 3px solid var(--laranja);
+}
+
+.menu {
+  cursor: pointer;
+  display: none;
+}
+.menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--branco);
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+/*slides*/
+.home {
+  width: 1250px;
+  height: 520px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px #888;
+}
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+.slides input {
+  display: none;
+}
+.imagens {
+  width: 25%;
+  transition: 0.6s;
+}
+.imagens img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.navigation-slides {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+}
+.navigation-slides .nav {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #888;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.9s;
+}
+.navigation-slides .nav:hover {
+  background: var(--branco);
+  border: 1px solid var(--branco);
+}
+#radio1:checked ~ .one {
+  margin-left: 0;
+}
+#radio2:checked ~ .one {
+  margin-left: -25%;
+}
+#radio3:checked ~ .one {
+  margin-left: -50%;
+}
+/*Sobre*/
+.bio {
+  margin-top: 100px;
+}
+.bio .titulo {
+  margin-left: 90px;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
+.texto-bio {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+}
+.footer {
+  background-color: #292c35;
+  height: 200px;
+  margin-top: 40px;
+}
+.componentes {
+  margin-left: 45%;
+}
+.titulo-footer {
+  margin-top: 10px;
+  color: var(--branco);
+}
+.localizacao {
+  margin-top: 30px;
+  width: 30px;
+}
+.loc {
+  color: var(--branco);
+  text-decoration: none;
+  left: 10px;
+}
+.email {
+  margin-top: 10px;
+  width: 30px;
+}
+.email-bio {
+  color: var(--branco);
+  text-decoration: none;
+}
